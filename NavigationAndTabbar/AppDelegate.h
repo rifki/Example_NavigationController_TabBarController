@@ -15,7 +15,6 @@
 @property (strong, nonatomic) UINavigationController *searchNav;
 @property (strong, nonatomic) UINavigationController *settingNav;
 @property (strong, nonatomic) UINavigationController *aboutNav;
-@property (strong, nonatomic) UINavigationController *otherNav;
 @property (strong, nonatomic) UITabBarController *mainTabBar;
 
 @property (strong, nonatomic) IBOutlet UIWindow *window;
