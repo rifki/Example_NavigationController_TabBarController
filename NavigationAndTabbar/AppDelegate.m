@@ -12,11 +12,10 @@
 #import "SearchViewController.h"
 #import "SettingViewController.h"
 #import "AboutViewController.h"
-#import "OtherViewController.h"
 
 @implementation AppDelegate
 
-@synthesize homeNav, favNav, searchNav, settingNav, aboutNav, otherNav, mainTabBar;
+@synthesize homeNav, favNav, searchNav, settingNav, aboutNav, mainTabBar;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -40,17 +39,13 @@
     AboutViewController *aboutView = [[AboutViewController alloc] init];
     [aboutView setTitle:@"ABOUT US"];
     
-    AboutViewController *otherView = [[AboutViewController alloc] init];
-    [otherView setTitle:@"Other"];
-    
     homeNav = [[UINavigationController alloc] initWithRootViewController: homeView];
     favNav = [[UINavigationController alloc] initWithRootViewController: favView];
     searchNav = [[UINavigationController alloc] initWithRootViewController: searchView];
     settingNav = [[UINavigationController alloc] initWithRootViewController: settingView];
     aboutNav = [[UINavigationController alloc] initWithRootViewController: aboutView];
-    otherNav = [[UINavigationController alloc] initWithRootViewController: otherView];
     
-    NSArray *menus = [NSArray arrayWithObjects:homeNav,favNav,searchNav,settingNav,aboutNav,otherNav, nil];
+    NSArray *menus = [NSArray arrayWithObjects:homeNav,favNav,searchNav,settingNav,aboutNav,nil];
     
     mainTabBar = [[UITabBarController alloc] init];
     [mainTabBar setViewControllers:menus];
